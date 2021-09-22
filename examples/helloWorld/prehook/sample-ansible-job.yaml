@@ -2,9 +2,9 @@ apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
   generateName: demo-job-001
-  namespace: default
+  namespace: sample-app 
 spec:
-  tower_auth_secret: toweraccess
+  tower_auth_secret: admin
   job_template_name: Demo Job Template
   extra_vars:
     cost: 6.88
