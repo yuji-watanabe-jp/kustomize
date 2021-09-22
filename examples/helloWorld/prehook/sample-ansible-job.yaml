@@ -1,8 +1,24 @@
 apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
-  generateName: job-template-02
-  namespace: ansible-ns 
+  name: job-template-03
+  namespace: ansible-ns
 spec:
+  extra_vars:
+    cost: 6.88
+    ghosts:
+    - inky
+    - pinky
+    - clyde
+    - sue
+    is_enable: false
+    other_variable: foo
+    pacman: mrs
+    size: 8
+    targets_list:
+    - aaa
+    - bbb
+    - ccc
+    version: 1.23.45
+  job_template_name: Demo Job Template
   tower_auth_secret: admin
-  job_template_name: Demo Job Template 
